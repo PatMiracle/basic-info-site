@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basic Info Site</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          sans-serif;
+        background: #f1f1f1;
+        --black: #3d3d3d;
+        --green: #08a12f;
+        color: var(--black);
+      }
+      .green {
+        color: var(--green);
+      }
+      nav {
+        background: #fff;
+        box-shadow: 0 2px 10px 10px rgba(0, 0, 0, 0.1);
+      }
+      .nav-center {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 2vh 0;
+        width: 90%;
+        max-width: 1170px;
+        margin: 0 auto;
+      }
+      .logo {
+        font-size: 1.5rem;
+        text-decoration: none;
+      }
+      .nav-links {
+        list-style-type: none;
+        display: flex;
+        gap: 1rem;
+      }
+      .nav-links a {
+        text-decoration: none;
+        color: var(--black);
+      }
+      .nav-links a:hover {
+        color: var(--green);
+      }
+      main {
+        padding: 5rem 0;
+        text-align: center;
+      }
+      footer {
+        background: var(--black);
+        padding: 1rem;
+        color: #fff;
+        text-align: center;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-center">
+        <a href="/" class="logo green">Info</a>
+        <ul class="nav-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact-me">Contact Me</a></li>
+        </ul>
+      </div>
+    </nav>
+    <main>{{content}}</main>
+    <footer>
+      <p>Basic Info Site &copy; <span id="date"></span></p>
+    </footer>
+    <script>
+      document.getElementById("date").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
