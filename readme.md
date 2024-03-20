@@ -1,6 +1,6 @@
 # Basic Info Site
 
-My first Node.js project.
+From [theodinproject](https://www.theodinproject.com/lessons/nodejs-basic-informational-site), I present you first Node.js project! 
 
 ![](./screenshot.png)
 
